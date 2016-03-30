@@ -10,8 +10,6 @@ import MyButton from './MyButton'
 var MyButtonController = React.createClass({
     //
     getInitialState: function () {
-        debugger;
-        UserActionCreators.requestUser("jeffer");
         return {
             items: ListStore.getAll()
         };
@@ -26,12 +24,11 @@ var MyButtonController = React.createClass({
     },
 
     _onChange: function () {
-         ListStore.getAll();
-
+           return ListStore.getAll()
     },
 
     createNewItem: function (event) {
-        UserActionCreators.requestUser(this.props);
+        UserActionCreators.requestUser("jeffer",['name', 'avatarUrl']);
         ButtonActions.addNewItem('测试数据');
     },
 
