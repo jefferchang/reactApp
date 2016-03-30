@@ -23,8 +23,12 @@
     "express-urlrewrite": "^1.2.0",
     "file-loader": "^0.8.5",
     "flux": "^2.1.1",
+    "humps": "^1.0.0",
+    "keymirror": "^0.1.1",
     "less": "^2.6.1",
     "less-loader": "^2.2.3",
+    "node-fetch": "^1.4.1",
+    "normalizr": "^2.0.0",
     "object-assign": "^4.0.1",
     "qs": "^6.1.0",
     "react": "^0.14.0",
@@ -32,11 +36,16 @@
     "react-addons-test-utils": "0.14.0",
     "react-bootstrap": "^0.28.4",
     "react-dom": "^0.14.0",
+    "react-fetch": "0.0.7",
+    "react-pure-render": "^1.0.2",
     "react-router": "^2.0.1",
+    "selectn": "^1.0.9",
     "style-loader": "^0.12.4",
+    "underscore": "^1.8.3",
     "url-loader": "^0.5.7",
     "webpack": "^1.4.13",
-    "webpack-dev-middleware": "^1.2.0"
+    "webpack-dev-middleware": "^1.2.0",
+    "whatwg-fetch": "^0.11.0"
   },
   "devDependencies": {}
 }
