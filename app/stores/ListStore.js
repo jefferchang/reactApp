@@ -3,14 +3,13 @@
  */
 import EventEmitter from 'events' ;
 import assign from 'object-assign';
+import 'whatwg-fetch';
 var EventE = EventEmitter.EventEmitter;
 var ListStore = assign({}, EventE.prototype, {
-    items: [],
-
+    items: [] ,
     getAll: function () {
         return this.items;
     },
-
     addNewItemHandler: function (text) {
         this.items.push(text);
     },

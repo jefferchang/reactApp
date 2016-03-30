@@ -4,11 +4,14 @@
 import React from 'react'
 import ListStore from '../../stores/ListStore'
 import ButtonActions from  '../../actions/ButtonActions'
+import * as UserActionCreators from  '../../actions/UserActionCreators'
 import MyButton from './MyButton'
 
 var MyButtonController = React.createClass({
     //
     getInitialState: function () {
+        debugger;
+        UserActionCreators.requestUser("jeffer");
         return {
             items: ListStore.getAll()
         };
@@ -23,12 +26,12 @@ var MyButtonController = React.createClass({
     },
 
     _onChange: function () {
-        this.setState({
-            items: ListStore.getAll()
-        });
+         ListStore.getAll();
+
     },
 
     createNewItem: function (event) {
+        UserActionCreators.requestUser(this.props);
         ButtonActions.addNewItem('测试数据');
     },
 
