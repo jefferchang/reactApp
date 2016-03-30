@@ -45,6 +45,7 @@ function fetchAndNormalize(url, schema) {
 
   return fetch(url).then(response =>
     response.json().then(json => {
+      debugger;
       const camelizedJson = camelizeKeys(json);
       const nextPageUrl = getNextPageUrl(response) || undefined;
 
