@@ -12,7 +12,7 @@ var ListStore = assign({}, EventE.prototype, {
         return this.items;
     },
     addNewItemHandler: function (text) {
-        fetch('http://localhost:3005/api/go').then(function(response){
+        fetch('/api/go').then(function(response){
             console.log(response);
             ListStore.items.push(text);
             ListStore.emitChange();

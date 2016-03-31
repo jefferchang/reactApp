@@ -4,12 +4,13 @@ var rewrite = require('express-urlrewrite')
 var webpack = require('webpack')
 var webpackDevMiddleware = require('webpack-dev-middleware')
 var WebpackConfig = require('./webpack.config')
-var proxy = require('express-http-proxy');
+var proxy = require('express-http-proxy')
+var url = require('url')
 
-var favicon = require('serve-favicon');
-var cookieParser = require('cookie-parser');
-var proxymid = require('proxy-middleware');
-var url = require('url');
+/*
+var favicon = require('serve-favicon')
+var cookieParser = require('cookie-parser')
+var proxymid = require('proxy-middleware')*/
 
 
 var app = express()
@@ -20,7 +21,8 @@ app.all('*', function(req, res, next) {
   res.header("X-Powered-By", ' 3.2.1')
   res.header("Content-Type", "application/json;charset=utf-8");
   next();
-});
+})
+
 app.use(webpackDevMiddleware(webpack(WebpackConfig), {
   publicPath: '/__build__/',
   stats: {
@@ -31,7 +33,7 @@ app.use(webpackDevMiddleware(webpack(WebpackConfig), {
 var fs = require('fs')
 var path = require('path')
 __dirname=__dirname+ '/app'
-app.use(express.static(__dirname));
+app.use(express.static(__dirname))
 
 
 fs.readdirSync(__dirname).forEach(function (file) {
@@ -63,13 +65,15 @@ app.use('/api/*', proxy('www.loveyfl.cn', {
   }
 }));
 
-//app.use('/', proxymid(url.parse('http://localhost:3005')));
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
+  try{
+    var err = {};
+    err.status = 404;
+  }catch (e){
+    console.log("e"+e);
+  }
   next(err);
 });
-
 app.listen(3005, function () {
   console.log('Server listening on http://localhost:3005, Ctrl+C to stop')
 })
