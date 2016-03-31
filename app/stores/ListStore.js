@@ -17,6 +17,8 @@ var ListStore = assign({}, EventE.prototype, {
             ListStore.items.push(text);
             ListStore.emitChange();
         },function(response){
+            ListStore.items.push('连接失败！');
+            ListStore.emitChange();
         })
     },
 

@@ -29,7 +29,7 @@ var MyButtonController = React.createClass({
     },
 
     createNewItem: function (event) {
-        ButtonActions.addNewItem('测试数据');
+        ButtonActions.addNewItem('连接成功！');
     },
 
     render: function() {
