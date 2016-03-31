@@ -1,7 +1,7 @@
 /**
  * Created by Administrator on 2016/3/30.
  */
-import * as AppDispatcher from '../dispatcher/AppDispatcher';
+import   AppDispatcher from '../dispatcher/AppDispatcher';
 
 var ButtonActions = {
     addNewItem: function (text) {
