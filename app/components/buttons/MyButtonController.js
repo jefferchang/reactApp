@@ -4,14 +4,13 @@
 import React from 'react'
 import ListStore from '../../stores/ListStore'
 import ButtonActions from  '../../actions/ButtonActions'
-import * as UserActionCreators from  '../../actions/UserActionCreators'
 import MyButton from './MyButton'
 
 var MyButtonController = React.createClass({
     //
     getInitialState: function () {
         return {
-            items: ListStore.getAll()
+            items:  ListStore.getAll()
         };
     },
 //
@@ -24,12 +23,13 @@ var MyButtonController = React.createClass({
     },
 
     _onChange: function () {
-           return ListStore.getAll()
+        this.setState({
+            items: ListStore.getAll()
+        });
     },
 
     createNewItem: function (event) {
-        UserActionCreators.requestUser("jeffer",['name', 'avatarUrl']);
-        ButtonActions.addNewItem('测试数据');
+        ButtonActions.addNewItem('连接成功！');
     },
 
     render: function() {
