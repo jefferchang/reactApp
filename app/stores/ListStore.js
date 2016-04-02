@@ -12,10 +12,12 @@ var ListStore = assign({}, EventE.prototype, {
         return this.items;
     },
     addNewItemHandler: function (text) {
-        fetch('/api/go').then(function(response){
-            console.log(response);
-            ListStore.items.push(text);
-            ListStore.emitChange();
+        fetch('/rest/sys/department/deptTree.json').then(function(response){
+                response.json().then(json => {
+                    console.log(json[0].text);
+                    ListStore.items.push(json[0].text);
+                    ListStore.emitChange();
+                });
         },function(response){
             ListStore.items.push('连接失败！');
             ListStore.emitChange();

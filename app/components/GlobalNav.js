@@ -33,6 +33,8 @@ class GlobalNav extends React.Component {
   logOut() {
     alert('log out')
   }
+
+
   render() {
     const { user } = this.props
     return (
@@ -44,7 +46,8 @@ class GlobalNav extends React.Component {
           <Link to="/messages" style={styles.link} activeStyle={styles.activeLink}>Messages</Link>{' '}
         </div>
         <div style={{ float: 'right' }}>
-          <Link style={styles.link} to="/profile">{user.name}</Link> <button onClick={this.logOut}>log out</button>
+          <Link style={styles.link} to="/profile">{user.name}</Link>
+            <button onClick={this.logOut}>log out</button>
         </div>
       </div>
     )
@@ -54,7 +57,7 @@ class GlobalNav extends React.Component {
 GlobalNav.defaultProps = {
   user: {
     id: 1,
-    name: 'Ryan Florence'
+    name: '常仪彪'
   }
 }
 
