@@ -16,4 +16,4 @@ const rootRoute = {
 }
 render(
     <Router history={browserHistory} routes={rootRoute} />
- , document.getElementById('index'));
+ , document.getElementById('loginDiv'));

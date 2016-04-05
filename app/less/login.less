@@ -1,11 +1,17 @@
-.box-shadow(@style, @c) when (iscolor(@c)) {
-  box-shadow:         @style @c;
-  -webkit-box-shadow: @style @c;
-  -moz-box-shadow:    @style @c;
+.inner-shadow(@param1,@param2,@param3,@opacity){
+  -webkit-box-shadow:inset @param1 @param2 @param3 rgba(0, 0, 0, @opacity);
+  -moz-box-shadow:inset @param1 @param2 @param3 rgba(0, 0, 0, @opacity);
+  box-shadow:inset @param1 @param2 @param3 rgba(0, 0, 0, @opacity);
+  padding-top: 15%;
+  padding-bottom: 22%;
 }
-.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
-  .box-shadow(@style, rgba(0, 0, 0, @alpha));
+.border-radius (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
 }
-.box {
-  div { .box-shadow(0 0 5px, 30%) }
+
+#loginDiv{
+  .border-radius(20px);
+  .inner-shadow(20px, 40px, 20px, 0.6);
 }

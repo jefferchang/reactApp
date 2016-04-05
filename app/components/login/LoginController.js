@@ -68,7 +68,7 @@ var LoginController = React.createClass( {
     },
     render: function() {
         return (
-            <div  >
+            <div >
                     <form  onSubmit={this.handleSubmit}>
                         <div  className="form-horizontal" >
                             <Input type="text" label="用户名:" labelClassName="col-xs-4" className="input-lg" wrapperClassName="col-xs-4" ref="email" onChange={this.handleChange} />
@@ -79,7 +79,6 @@ var LoginController = React.createClass( {
                                 <Button className="pull-right"   type="submit"  bsStyle="primary"  value="submit"  disabled={this.state.disabled} >登录</Button>
                             </ButtonToolbar>
                         </div>
-
                     </form>
             </div>
         )
