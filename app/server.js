@@ -27,9 +27,12 @@ var fs = require('fs')
 var path = require('path')
 
 fs.readdirSync(__dirname).forEach(function (file) {
-  if (fs.statSync(path.join(__dirname, file)).isDirectory())
-    app.use(rewrite('/' + file + '/*', '/' + file + '/index.html'))
+  if (fs.statSync(path.join(__dirname, file)).isDirectory()&&file.indexOf("_")>0){
+      app.use(rewrite('/' + file + '/*', '/' + file + '/index.html'))
+  }
 })
+app.use(rewrite('/', '/m_index'+ '/index.html'))
+
 app.use(express.static(__dirname))
 
 app.use('/rest', proxy('192.168.1.100', {

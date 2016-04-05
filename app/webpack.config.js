@@ -6,9 +6,9 @@ module.exports = {
 
   devtool: 'inline-source-map',
   entry: fs.readdirSync(__dirname).reduce(function (entries, dir) {
-    if (fs.statSync(path.join(__dirname, dir)).isDirectory())
-      entries[dir] = path.join(__dirname, dir, 'login.js')
-
+    if (fs.statSync(path.join(__dirname, dir)).isDirectory()&&dir.indexOf("_")>0){
+        entries[dir] = path.join(__dirname, dir, 'm_index.js')
+    }
     return entries
   }, {}),
   output: {
