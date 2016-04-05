@@ -12,11 +12,9 @@ class Dashboard extends React.Component {
           </div>
           <h2>Courses</h2>{' '}
           <ul>
-            {courses.map(course => (
-                <li key={course.id}>
-                  <Link to={`/course/${course.id}`}>{course.name}</Link>
-                </li>
-            ))}
+              <li>
+                  测试
+              </li>
           </ul>
         </div>
     )

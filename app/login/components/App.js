@@ -9,7 +9,7 @@ class App extends React.Component {
       <div>
         <GlobalNav />
         <div style={{ padding: 20 }}>
-          {this.props.children || <Dashboard courses={COURSES} /> }
+          {this.props.children || <Dashboard /> }
         </div>
       </div>
     )
