@@ -48,7 +48,7 @@ class GlobalNav extends React.Component {
         <div style={{ float: 'right' }}>
           <Link style={styles.link} to="/profile">{user.name}</Link>
             <button onClick={this.logOut}>log out</button>
-            <Link style={styles.link} to="/login">登录</Link>
+            <a style={styles.link} href="m_login/login">登录</a>
         </div>
       </div>
     )

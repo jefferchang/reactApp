@@ -8,13 +8,9 @@ const rootRoute = {
     component: 'div',
     childRoutes: [{
         path: '/',
-        component: require('./../components/App'),
+        component: require('./../components/login/Login'),
         childRoutes: [
-            require('./../routes/Calendar'),
-            require('./../routes/Course'),
-            require('./../routes/Messages'),
-            require('./../routes/Grades'),
-            require('./../routes/Profile')
+            require('./../routes/Login')
         ]
     }]
 }
