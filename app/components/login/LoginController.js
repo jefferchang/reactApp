@@ -5,6 +5,7 @@ import './../../less/login.less';
 import React from 'react'
 import LoginStore from  './../../stores/LoginStore';
 import {Panel, Input,Button ,ButtonToolbar} from 'react-bootstrap';
+import { browserHistory, Router, Route, Link} from 'react-router'
 var styles = {};
 styles.container={
     padding: 11,
@@ -19,6 +20,7 @@ var LoginController = React.createClass( {
             style: null
         };
     },
+    mixins : [Router.Navigation],
     resetValidation: function () {
         this.setState({
             disabled: true,
@@ -38,37 +40,26 @@ var LoginController = React.createClass( {
     },
     handleSubmit(event) {
         event.preventDefault()
+        var vm=this;
         const email = this.refs.email.value
         const pass = this.refs.pass.value
         LoginStore.login(email, pass).then(function (response) {
-            debugger;
             response.json().then(json => {
-                console.log(json[0].text);
+                console.log(json);
+                if(json){
+                    window.location.href= "/";
+                }
+                return true;
             })
         }, function (response) {
-            debugger;
             response.json().then(json => {
                 console.log(json[0].text);
             })
         })
-        /**
-         * , (loggedIn) => {
-            if (!loggedIn)
-                return this.setState({ error: true })
-
-            const { location } = this.props
-
-            if (location.state && location.state.nextPathname) {
-                this.context.router.replace(location.state.nextPathname)
-            } else {
-                this.context.router.replace('/')
-            }
-        }
-         */
     },
     render: function() {
         return (
-            <div >
+            <div>
                     <form  onSubmit={this.handleSubmit}>
                         <div  className="form-horizontal" >
                             <Input type="text" label="用户名:" labelClassName="col-xs-4" className="input-lg" wrapperClassName="col-xs-4" ref="email" onChange={this.handleChange} />
