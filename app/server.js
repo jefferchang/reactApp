@@ -35,8 +35,8 @@ app.use(rewrite('/', '/m_index'+ '/index.html'))
 
 app.use(express.static(__dirname))
 
-app.use('/rest', proxy('192.168.1.100', {
-  port: 8082,
+app.use('/user', proxy('localhost', {
+  port: 8080,
   filter: function(req,res){
     console.log("进入filter 过虑.....");
     return true;
@@ -44,8 +44,8 @@ app.use('/rest', proxy('192.168.1.100', {
   forwardPath: function(req, res) {
     console.log("进入forwardPath请求....");
     var fpath = require('url').parse(req.url).path;
-    fpath = '/rest'+ fpath;
-    console.log('http://localhost:8082' + fpath);
+    fpath = '/JLCService-mkt/user'+ fpath;
+    console.log('http://localhost:8080' + fpath);
     return fpath;
   },
   intercept: function(rsp, data, req, res, callback) {

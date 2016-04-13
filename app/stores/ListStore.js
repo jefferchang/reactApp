@@ -12,10 +12,10 @@ var ListStore = assign({}, EventE.prototype, {
         return this.items;
     },
     addNewItemHandler: function (text) {
-        fetch('/rest/sys/department/deptTree.json').then(function(response){
+        fetch('/user/userAction_getMemberListByMobilePhone.dhtml?mobilePhone=18510573985').then(function(response){
                 response.json().then(json => {
-                    console.log(json[0].text);
-                    ListStore.items.push(json[0].text);
+                    console.log(json[0].userName);
+                    ListStore.items.push(json[0].userName);
                     ListStore.emitChange();
                 });
         },function(response){

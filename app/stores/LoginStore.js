@@ -8,7 +8,7 @@ var EventE = EventEmitter.EventEmitter;
 var LoginStore = assign({}, EventE.prototype, {
     items: [] ,
     login: function (name,pass) {
-        return fetch('/rest/sys/department/deptTree.json');
+        return fetch('/user/userAction_getMemberListByMobilePhone.dhtml?mobilePhone=18510573985');
     }
 });
 
