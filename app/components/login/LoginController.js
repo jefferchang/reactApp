@@ -14,13 +14,15 @@ styles.container={
 }
 
 var LoginController = React.createClass( {
+  /*  contextTypes: {
+        router: React.PropTypes.object
+    },*/
     getInitialState:function() {
         return {
             disabled: true,
             style: null
         };
     },
-    mixins : [Router.Navigation],
     resetValidation: function () {
         this.setState({
             disabled: true,
@@ -43,9 +45,11 @@ var LoginController = React.createClass( {
         var vm=this;
         const email = this.refs.email.value
         const pass = this.refs.pass.value
-        LoginStore.login(email, pass).then(function (response) {
+
+        const { location } = this.props
+            //this.context.router.replace('m_index')
+       LoginStore.login(email, pass).then(function (response) {
             response.json().then(json => {
-                console.log(json);
                 if(json){
                     window.location.href= "/";
                 }
