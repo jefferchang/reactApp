@@ -2,14 +2,13 @@ import React from 'react'
 import { Link } from 'react-router'
 import { ButtonToolbar,Button,Navbar,NavbarHeader,NavbarBrand,NavbarToggle,NavbarCollapse ,Nav,NavItem,MenuItem,NavDropdown} from 'react-bootstrap'
 
-const dark = 'hsl(200, 20%, 20%)'
 const light = '#fff'
 const styles = {}
 
 styles.wrapper = {
     padding: '20px 20px',
     overflow: 'hidden',
-    background: dark,
+    background: '#4D4D60',
     color: light
 }
 
@@ -22,7 +21,7 @@ styles.link = {
 styles.activeLink = {
     ...styles.link,
     background: light,
-    color: dark
+    color: '#4D4D60'
 }
 class GlobalNav extends React.Component {
   constructor(props, context) {
