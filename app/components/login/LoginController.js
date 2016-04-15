@@ -31,9 +31,7 @@ var LoginController = React.createClass( {
     },
     validationState :function() {
         let length = this.refs.email.getValue().length;
-        let style = 'danger';
-        if (length > 3) style = 'success';
-        else if (length > 2) style = 'warning';
+        let style = 'success';
         let disabled = style !== 'success';
         return { style, disabled };
     },
