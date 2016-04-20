@@ -39,10 +39,10 @@ class GlobalNav extends React.Component {
     return (
      <div style={styles.wrapper}>
         <div style={{ float: 'left' }}>
-          <Link to="/" style={styles.link}>Home</Link>{' '}
-          <Link to="/calendar" style={styles.link} activeStyle={styles.activeLink}>Calendar</Link>{' '}
-          <Link to="/grades" style={styles.link} activeStyle={styles.activeLink}>Grades</Link>{' '}
-          <Link to="/messages" style={styles.link} activeStyle={styles.activeLink}>Messages</Link>{' '}
+          <Link to="/" style={styles.link}>主页</Link>{' '}
+          <Link to="/calendar" style={styles.link} activeStyle={styles.activeLink}>日历</Link>{' '}
+          <Link to="/grades" style={styles.link} activeStyle={styles.activeLink}>级别</Link>{' '}
+          <Link to="/messages" style={styles.link} activeStyle={styles.activeLink}>信息</Link>{' '}
         </div>
         <div style={{ float: 'right' }}>
           <Link style={styles.link} to="/profile">{user.name}</Link>
