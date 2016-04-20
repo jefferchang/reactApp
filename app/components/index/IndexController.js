@@ -1,0 +1,78 @@
+/**
+ * Created by jeffer on 2016/4/2.
+ */
+import React from 'react'
+import {Media, Input,Button ,ButtonToolbar} from 'react-bootstrap';
+import { browserHistory, Router, Route, Link} from 'react-router'
+
+var IndexController = React.createClass( {
+   contextTypes: {
+        router: React.PropTypes.object
+    },
+    render: function() {
+        return (
+            <div>
+
+                <Media className="center_index">
+                    <Media.Left align="top">
+                        <img width={100} height={100}    src="http://g.hiphotos.baidu.com/imgad/pic/item/f603918fa0ec08fa9f0b7dd85eee3d6d55fbda42.jpg" alt="Image"/>
+                    </Media.Left>
+                    <Media.Body>
+                        <Media.Heading>Top aligned media</Media.Heading>
+                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+
+                        <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                    </Media.Body>
+                </Media>
+
+
+                <Media className="center_index">
+                    <Media.Left align="middle">
+                        <img width={100} height={100} src="http://g.hiphotos.baidu.com/imgad/pic/item/f603918fa0ec08fa9f0b7dd85eee3d6d55fbda42.jpg" alt="Image"/>
+                    </Media.Left>
+                    <Media.Body>
+                        <Media.Heading>Middle aligned media</Media.Heading>
+                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+
+                        <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                    </Media.Body>
+                </Media>
+                <Media className="center_index">
+                    <Media.Left align="bottom">
+                        <img width={100} height={100} src="http://g.hiphotos.baidu.com/imgad/pic/item/f603918fa0ec08fa9f0b7dd85eee3d6d55fbda42.jpg" alt="Image"/>
+                    </Media.Left>
+                    <Media.Body>
+                        <Media.Heading>Bottom aligned media</Media.Heading>
+                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+
+                        <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                    </Media.Body>
+                </Media>
+                <Media className="center_index">
+                    <Media.Left align="bottom">
+                        <img width={100} height={100} src="http://g.hiphotos.baidu.com/imgad/pic/item/f603918fa0ec08fa9f0b7dd85eee3d6d55fbda42.jpg" alt="Image"/>
+                    </Media.Left>
+                    <Media.Body>
+                        <Media.Heading>Bottom aligned media</Media.Heading>
+                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+
+                        <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                    </Media.Body>
+                </Media>
+                <Media className="center_index">
+                    <Media.Left align="bottom">
+                        <img width={100} height={100} src="http://g.hiphotos.baidu.com/imgad/pic/item/f603918fa0ec08fa9f0b7dd85eee3d6d55fbda42.jpg" alt="Image"/>
+                    </Media.Left>
+                    <Media.Body>
+                        <Media.Heading>Bottom aligned media</Media.Heading>
+                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+
+                        <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                    </Media.Body>
+                </Media>
+            </div>
+        )
+    }
+})
+
+module.exports = IndexController
