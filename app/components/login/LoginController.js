@@ -4,7 +4,7 @@
 import './../../less/login.less';
 import React from 'react'
 import LoginStore from  './../../stores/LoginStore';
-import {Panel, Input,Button ,ButtonToolbar} from 'react-bootstrap';
+import {Panel,Grid,Col,Row, Input,Button ,ButtonToolbar} from 'react-bootstrap';
 import { browserHistory, Router, Route, Link} from 'react-router'
 var styles = {};
 styles.container={
@@ -67,10 +67,17 @@ var LoginController = React.createClass( {
                             <Input type="text" label="用户名:" labelClassName="col-xs-4" className="input-lg" wrapperClassName="col-xs-4" ref="email" onChange={this.handleChange} />
                             <Input type="password" label="密码:" labelClassName="col-xs-4" className="input-lg" wrapperClassName="col-xs-4" ref="pass" />
                             <Input type="checkbox" label="记住密码" wrapperClassName="col-xs-offset-4 col-xs-4" />
-                            <ButtonToolbar className="col-xs-5" >
-                                <Button className="pull-right" type="reset" bsStyle="default"   onClick={this.resetValidation}  >重置</Button>
-                                <Button className="pull-right"   type="submit"  bsStyle="primary"  value="submit"  disabled={this.state.disabled} >登录</Button>
-                            </ButtonToolbar>
+
+                            <Grid>
+                                <Row className="show-grid">
+                                    <Col sm={12} md={5} >
+                                        <Button className="pull-right"   type="submit"  bsStyle="primary"  value="submit"  disabled={this.state.disabled} >登录</Button>
+                                    </Col>
+                                    <Col sm={12} md={1}>
+                                        <Button className="pull-right" type="reset" bsStyle="default"   onClick={this.resetValidation}  >重置</Button>
+                                    </Col>
+                                </Row>
+                            </Grid>
                         </div>
                     </form>
             </div>

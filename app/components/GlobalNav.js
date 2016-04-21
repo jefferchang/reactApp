@@ -43,7 +43,6 @@ class GlobalNav extends React.Component {
           <Link to="/messages" style={styles.link} activeStyle={styles.activeLink}>信息</Link>{' '}
         </div>
         <div style={{ float: 'right' }}>
-            <button onClick={this.logOut}>log out</button>
             <a style={styles.link} href="m_login/login">登录</a>
         </div>
       </div>
