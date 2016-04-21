@@ -2,7 +2,7 @@
  * Created by jeffer on 2016/4/2.
  */
 import React from 'react'
-import {Media, Input,Button ,ButtonToolbar} from 'react-bootstrap';
+import {Media, Input,Button ,ButtonToolbar,Label} from 'react-bootstrap';
 import { browserHistory, Router, Route, Link} from 'react-router'
 
 var IndexController = React.createClass( {
@@ -23,6 +23,12 @@ var IndexController = React.createClass( {
 
                         <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
                     </Media.Body>
+                    <div>
+                        &nbsp;<Label bsStyle="default">黑历史</Label>&nbsp;
+                        &nbsp;<Label bsStyle="primary">红历史</Label>&nbsp;
+                        &nbsp;<Label bsStyle="success">经历</Label>&nbsp;
+                        &nbsp;<Label bsStyle="success">赞</Label>&nbsp;
+                    </div>
                 </Media>
 
 
@@ -36,6 +42,12 @@ var IndexController = React.createClass( {
 
                         <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
                     </Media.Body>
+                    <div>
+                        &nbsp;<Label bsStyle="default">黑历史</Label>&nbsp;
+                        &nbsp;<Label bsStyle="primary">红历史</Label>&nbsp;
+                        &nbsp;<Label bsStyle="success">经历</Label>&nbsp;
+                        &nbsp;<Label bsStyle="success">赞</Label>&nbsp;
+                    </div>
                 </Media>
                 <Media className="center_index">
                     <Media.Left align="bottom">
@@ -47,6 +59,12 @@ var IndexController = React.createClass( {
 
                         <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
                     </Media.Body>
+                    <div>
+                        &nbsp;<Label bsStyle="default">黑历史</Label>&nbsp;
+                        &nbsp;<Label bsStyle="primary">红历史</Label>&nbsp;
+                        &nbsp;<Label bsStyle="success">经历</Label>&nbsp;
+                        &nbsp;<Label bsStyle="success">赞</Label>&nbsp;
+                    </div>
                 </Media>
                 <Media className="center_index">
                     <Media.Left align="bottom">
@@ -58,6 +76,12 @@ var IndexController = React.createClass( {
 
                         <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
                     </Media.Body>
+                    <div>
+                        &nbsp;<Label bsStyle="default">黑历史</Label>&nbsp;
+                        &nbsp;<Label bsStyle="primary">红历史</Label>&nbsp;
+                        &nbsp;<Label bsStyle="success">经历</Label>&nbsp;
+                        &nbsp;<Label bsStyle="success">赞</Label>&nbsp;
+                    </div>
                 </Media>
                 <Media className="center_index">
                     <Media.Left align="bottom">
@@ -69,6 +93,12 @@ var IndexController = React.createClass( {
 
                         <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
                     </Media.Body>
+                    <div>
+                        &nbsp;<Label bsStyle="default">黑历史</Label>&nbsp;
+                        &nbsp;<Label bsStyle="primary">红历史</Label>&nbsp;
+                        &nbsp;<Label bsStyle="success">经历</Label>&nbsp;
+                        &nbsp;<Label bsStyle="success">赞</Label>&nbsp;
+                    </div>
                 </Media>
             </div>
         )
