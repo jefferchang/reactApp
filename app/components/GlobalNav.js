@@ -6,7 +6,7 @@ const light = '#fff'
 const styles = {}
 
 styles.wrapper = {
-    padding: '20px 20px',
+    padding: '10px 10px',
     overflow: 'hidden',
     background: '#4D4D60',
     color: light
@@ -40,12 +40,9 @@ class GlobalNav extends React.Component {
      <div style={styles.wrapper}>
         <div style={{ float: 'left' }}>
           <Link to="/" style={styles.link}>主页</Link>{' '}
-          <Link to="/calendar" style={styles.link} activeStyle={styles.activeLink}>日历</Link>{' '}
-          <Link to="/grades" style={styles.link} activeStyle={styles.activeLink}>级别</Link>{' '}
           <Link to="/messages" style={styles.link} activeStyle={styles.activeLink}>信息</Link>{' '}
         </div>
         <div style={{ float: 'right' }}>
-          <Link style={styles.link} to="/profile">{user.name}</Link>
             <button onClick={this.logOut}>log out</button>
             <a style={styles.link} href="m_login/login">登录</a>
         </div>
